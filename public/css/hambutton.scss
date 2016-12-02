@@ -1,0 +1,152 @@
+$bgcolor: #b06c6e;
+$buttoncolor: #6480a3;
+$buttonbordercolor: #FFFFFF;
+$buttonborderwidth: 8px;
+$buttonfontsize: 4em;
+$buttonshadowcolor: #B1B06C;
+
+
+@mixin rounded($val) {
+	border-radius: $val;
+}
+@mixin boxed {
+	@include rounded(10px);
+	background: rgba(0, 0, 0, .30);
+	padding: 20px 0;
+	margin: 40px auto;
+	position: relative;
+	width: 600px;
+	color: $buttonshadowcolor;
+	text-shadow: 0px 1px 0px #000000;
+}
+
+@font-face {
+	font-family: 'LeagueGothicRegular';
+	src: url('../fonts/League_Gothic-webfont.eot');
+	src: url('../fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/League_Gothic-webfont.woff') format('woff'),
+	     url('../fonts/League_Gothic-webfont.ttf') format('truetype'),
+	     url('../fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Disable certain interactions on touch devices */
+body { -webkit-touch-callout: none; -webkit-text-size-adjust: none; -webkit-user-select: none; -webkit-highlight: none; -webkit-tap-highlight-color: rgba(0,0,0,0); }
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	margin:0px;
+	background-color: $bgcolor;
+	background-size: cover;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	background-image: url('../img/bgham.jpg');
+
+	a {
+		&:link, &:visited, &:active {
+			color: lighten($buttoncolor, 25);
+		}
+
+	}
+
+	#container {
+		overflow:auto;
+		position:relative;
+		bottom:0px;
+		top:0px;
+		left:0px;
+		right:0px;
+		height:100%;
+		margin: auto;
+		text-align: center;
+
+		h1 {
+			font-family: 'LeagueGothicRegular';
+			font-size:5em;
+			font-weight: normal;
+			color: #FFFFFF;
+			letter-spacing: 4px;
+			margin:.5em 0 0 0;
+			line-height: 1em;
+		}
+
+		#hambutton {
+			@include rounded(2em);
+			cursor: pointer;
+			width:90%;
+			height: 160px;
+			border: $buttonborderwidth solid $buttonbordercolor;
+			font-size: $buttonfontsize;
+			background-color: $buttoncolor;
+			background-image: url('../img/play-arrow@2x.png');
+			background-size: 79px 95px;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			color:#FFFFFF;
+			box-shadow: 5px 5px 0px $buttonshadowcolor;
+			&:active {
+				padding-top: 3px;
+				padding-left: 3px;
+				background-color: darken($buttoncolor, 10);
+				box-shadow: 2px 2px 0px $buttonshadowcolor;
+			}
+		}
+
+		footer {
+			margin-top:2.5em;
+			bottom:0px;
+			height:20px;
+			color:#FFFFFF;
+			.twitter-share-button {
+				 vertical-align: top;
+			}
+		}
+	}
+}
+
+#shirts {
+	@include boxed();
+	img {
+		max-width: 140px;
+	}
+}
+
+#vc {
+    @include boxed();
+    > p {
+	    margin: 0 0 20px;
+	    padding: 0 10px;
+	    font-size: 16px;
+	    line-height: 24px;
+	}
+	> a {
+	    display: inline-block;
+	    height: 80px;
+	    width: 45%;
+	    color: white;
+	    text-decoration: none;
+	    font-size: 13px;
+	    > span {
+		    display: block;
+		}
+		> img {
+		    max-height: 40px;
+		    margin: 10px auto;
+		    opacity: .75;
+		}
+		&:hover {
+		    text-decoration: underline;
+		    > img {
+			    opacity: 1;
+			}
+		}
+	}
+}
+
+
+@media only screen and (max-width: 620px){
+	#vc, #shirts {
+		width: 90%;
+	}
+}

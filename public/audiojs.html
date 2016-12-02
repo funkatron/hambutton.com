@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Ham!</title>
+	<script src="js/audio.min.js" type="text/javascript" charset="utf-8" async defer></script>
+	<script src="http://code.jquery.com/jquery-1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$(document).ready(function() {
+			audiojs.events.ready(function() {
+				var as = audiojs.createAll();
+			});
+		});
+	</script>
+</head>
+<body>
+	<audio src="sounds/ham.mp3" preload="auto"></audio>
+</body>
+</html>

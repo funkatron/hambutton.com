@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url("../fonts/League_Gothic-webfont.eot");
+  src: url("../fonts/League_Gothic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/League_Gothic-webfont.woff") format("woff"), url("../fonts/League_Gothic-webfont.ttf") format("truetype"), url("../fonts/League_Gothic-webfont.svg#LeagueGothicRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0px;
+  background-color: #b06c6e;
+  background-size: cover;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-image: url("../img/bgham.jpg"); }
+  body a:link, body a:visited, body a:active {
+    color: #b4c2d2; }
+  body #container {
+    overflow: auto;
+    position: relative;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 100%;
+    margin: auto;
+    text-align: center; }
+    body #container h1 {
+      font-family: 'LeagueGothicRegular';
+      font-size: 5em;
+      font-weight: normal;
+      color: #FFFFFF;
+      letter-spacing: 4px;
+      margin: .5em 0 0 0;
+      line-height: 1em; }
+    body #container #hambutton {
+      border-radius: 2em;
+      cursor: pointer;
+      width: 90%;
+      height: 160px;
+      border: 8px solid white;
+      font-size: 4em;
+      background-color: #6480a3;
+      background-image: url("../img/play-arrow@2x.png");
+      background-size: 79px 95px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      color: #FFFFFF;
+      box-shadow: 5px 5px 0px #b1b06c; }
+      body #container #hambutton:active {
+        padding-top: 3px;
+        padding-left: 3px;
+        background-color: #4f6785;
+        box-shadow: 2px 2px 0px #b1b06c; }
+    body #container footer {
+      margin-top: 2.5em;
+      bottom: 0px;
+      height: 20px;
+      color: #FFFFFF; }
+      body #container footer .twitter-share-button {
+        vertical-align: top; }
+
+#shirts {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px 0;
+  margin: 40px auto;
+  position: relative;
+  width: 600px;
+  color: #b1b06c;
+  text-shadow: 0px 1px 0px #000000; }
+  #shirts img {
+    max-width: 140px; }
+
+#vc {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px 0;
+  margin: 40px auto;
+  position: relative;
+  width: 600px;
+  color: #b1b06c;
+  text-shadow: 0px 1px 0px #000000; }
+  #vc > p {
+    margin: 0 0 20px;
+    padding: 0 10px;
+    font-size: 16px;
+    line-height: 24px; }
+  #vc > a {
+    display: inline-block;
+    height: 80px;
+    width: 45%;
+    color: white;
+    text-decoration: none;
+    font-size: 13px; }
+    #vc > a > span {
+      display: block; }
+    #vc > a > img {
+      max-height: 40px;
+      margin: 10px auto;
+      opacity: .75; }
+    #vc > a:hover {
+      text-decoration: underline; }
+      #vc > a:hover > img {
+        opacity: 1; }
+
+@media only screen and (max-width: 620px) {
+  #vc, #shirts {
+    width: 90%; } }
