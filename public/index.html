@@ -102,10 +102,10 @@
 		snd.addEventListener("play",onPlay);
 		snd.addEventListener("durationchange",onDurationChange);
 		if (!!snd.canPlayType && snd.canPlayType( 'audio/mpeg;' )) {
-			snd.setAttribute("src","http://hambutton.s3.amazonaws.com/ham.mp3");
+			snd.setAttribute("src","https://hambutton.s3.amazonaws.com/ham.mp3");
 			snd.setAttribute("type","audio/mpeg; codecs='mp3'");
 		} else {
-			snd.setAttribute("src","http://hambutton.s3.amazonaws.com/ham.wav");
+			snd.setAttribute("src","https://hambutton.s3.amazonaws.com/ham.wav");
 		}
 		snd.setAttribute("preload","auto");
 		snd.load();
