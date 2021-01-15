@@ -32,6 +32,11 @@
 				playSound();
 			}, false);
 
+			document.body.addEventListener('keypress', function(ev) {
+                if (ev.keyCode == 32) {  // 32 is the space bar
+                    playSound();
+                }
+			});
 
 			// onload event to hide nav bar
 			setTimeout(function(){
@@ -39,7 +44,6 @@
 			}, 0);
 
 		}, false);
-
 
 		function playSound() {
 			snd.play();
